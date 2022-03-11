@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block base %}
+<link type="text/css" rel="stylesheet" href="{{ url_for('static',filename='s.css')}}">
+<div class="jumbotron" style="background: #F0F8FF;">
+    <font size="6" color="#696969" face="fantasy">
+    <h1> Which animal do you want to explore? </h1>
+
+<form>
+
+      <input type="button" id="fbtn" class="btn btn-info" onclick="window.location.href = 'about';" value="CAT"/>
+    <input type="button" class="btn btn-danger" onclick="window.location.href = 'dog';" value="DOG"/>
+    <input type="button" class="btn btn-warning" onclick="window.location.href = 'fox';" value="FOX"/>
+    <input type="button" class="btn btn-success" onclick="window.location.href = 'croc';" value="CROCODILE"/>
+
+    </form>
+        <h2>All animals belong to a biological kingdom called kingdom Animalia. This kingdom is then broken down into over 30 groups, or phyla (plural form of phylum). About 75% of all species on Earth are animals. Animals are then broken down into two types: vertebrates and invertebrates.
+
+Animals with a backbone are vertebrates.
+Vertebrates belong to the phylum called Phylum Chordata.
+Vertebrates are further broken down into five classes: amphibians, birds, fish, mammals, and reptiles.
+Animals without a backbone are invertebrates.
+Most invertebrates are in the phylum Arthropoda.</h2>
+    </div>
+
+{%endblock%}
