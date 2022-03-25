@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block base %}
+<link href="static/s.css" rel="stylesheet" type="text/css">
+<div id="div">
+    <h1> ENTER THE NAME FOR YOUR LITTLE FOX</h1>
+    <form action="name">
+        <textarea cols="30" rows="1" name="usertext"></textarea>
+        <br><br>
+        <input type="submit" value="GO!">
+    </form>
+    <br>
+    <figure id="image">
+    <img src={{url_for('static',filename='myfox.png')}}  height="600">
+        </figure>
+</div>
+
+{%endblock%}

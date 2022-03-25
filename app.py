@@ -2,6 +2,7 @@
 from flask import Flask, render_template,url_for,redirect
 # from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
+from flask import request
 # from flask_mysqldb import MySQL
 # import mysql.connector
 #
@@ -39,6 +40,18 @@ def fox():
 @app.route('/croc')
 def croc():
     return render_template('croc.html')
+@app.route('/myfox')
+def myfox():
+    return render_template('myfox.html')
+@app.route('/name')
+def name():
+    myname = request.args.get('usertext')
+    print(myname)
+    return '''<h1>Now you have your fox {}</h1>'''.format(myname)
+
+
+
+
 
 
 # def set():
