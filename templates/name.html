@@ -1,10 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<h1>This is you fox{}</h1>.format(myname)
-</body>
-</html>
+{% extends 'base.html' %}
+{% block base %}
+<link href="static/s.css" rel="stylesheet" type="text/css">
+<div id="fox1">
+<h1>This is your little foxy {{myname}}</h1>
+    <img src={{url_for('static',filename='foxy.jpeg')}}  height="600">
+
+    <h1>Interesting facts about her:</h1>
+    <h2>1. She loves crocodile
+        <br>
+    2. She loves cookies</h2>
+    <br>
+     <h2>Look what you can do with her:
+    <ol id="feed">
+        <br>
+        <li>Feed a fox</li>
+        <li>Feed a fox</li>
+        <li>Feed a fox</li>
+        <li>Feed a fox</li>
+    </ol>
+         </h2>
+    </div>
+{%endblock%}

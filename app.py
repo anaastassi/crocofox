@@ -47,7 +47,8 @@ def myfox():
 def name():
     myname = request.args.get('usertext')
     print(myname)
-    return '''<h1>Now you have your fox {}</h1>'''.format(myname)
+    return render_template('name.html', myname = myname)
+    # return '''<h1>Now you have your fox {}</h1>'''.format(myname)
 
 
 
