@@ -5,8 +5,8 @@
 # from flask_mysqldb import MySQL
 # import mysql.connector
 #
-# app = Flask(__name__)
-# Bootstrap(app)
+app = Flask(__name__)
+Bootstrap(app)
 # mydb= mysql.connector.connect(
 #     host='localhost',
 #     user='root',
