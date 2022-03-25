@@ -1,7 +1,7 @@
 #
-# from flask import Flask, render_template,url_for,redirect
-# # from flask_sqlalchemy import SQLAlchemy
-# from flask_bootstrap import Bootstrap
+from flask import Flask, render_template,url_for,redirect
+# from flask_sqlalchemy import SQLAlchemy
+from flask_bootstrap import Bootstrap
 # from flask_mysqldb import MySQL
 # import mysql.connector
 #
