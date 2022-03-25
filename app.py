@@ -1,19 +1,19 @@
-
-from flask import Flask, render_template,url_for,redirect
-# from flask_sqlalchemy import SQLAlchemy
-from flask_bootstrap import Bootstrap
-from flask_mysqldb import MySQL
-import mysql.connector
-
-app = Flask(__name__)
-Bootstrap(app)
-mydb= mysql.connector.connect(
-    host='localhost',
-    user='root',
-    passwd='12345678',
-    database='flaskapp'
-)
-my_cursor= mydb.cursor()
+#
+# from flask import Flask, render_template,url_for,redirect
+# # from flask_sqlalchemy import SQLAlchemy
+# from flask_bootstrap import Bootstrap
+# from flask_mysqldb import MySQL
+# import mysql.connector
+#
+# app = Flask(__name__)
+# Bootstrap(app)
+# mydb= mysql.connector.connect(
+#     host='localhost',
+#     user='root',
+#     passwd='12345678',
+#     database='flaskapp'
+# )
+# my_cursor= mydb.cursor()
 #
 # app.config['MYSQL_HOST']='localhost'
 # app.config['MYSQL_USER']='root'
@@ -41,21 +41,21 @@ def croc():
     return render_template('croc.html')
 
 
-def set():
-    name = 'lovely'
-    email = 'crocodile'
-    my_cursor.execute("INSERT INTO users(name,email) VALUES (%s, %s)",(name,email))
-    mydb.commit()
-
-def get():
-
-
-    my_cursor.execute("SELECT * FROM users")
-
-    myresult = my_cursor.fetchall()
-
-    for x in myresult:
-        print(x)
+# def set():
+#     name = 'lovely'
+#     email = 'crocodile'
+#     my_cursor.execute("INSERT INTO users(name,email) VALUES (%s, %s)",(name,email))
+#     mydb.commit()
+#
+# def get():
+#
+#
+#     my_cursor.execute("SELECT * FROM users")
+#
+#     myresult = my_cursor.fetchall()
+#
+#     for x in myresult:
+#         print(x)
 
 
 
@@ -64,6 +64,6 @@ def get():
 
 
 if __name__ == '__main__':
-    set()
-    get()
+    # set()
+    # get()
     app.run(debug= True)
