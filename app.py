@@ -1,4 +1,4 @@
-import mysql
+
 from flask import Flask, render_template,url_for,redirect
 # from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
@@ -39,9 +39,7 @@ def fox():
 @app.route('/croc')
 def croc():
     return render_template('croc.html')
-@app.route('/myfox')
-def myfox():
-    return render_template('myfox.html')
+
 
 def set():
     name = 'lovely'
