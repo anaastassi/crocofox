@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block base %}
-<div class="jumbotron"style="background: #F0FFF0;">
+
+<div id='abs' class="jumbotron"style="background: #F0FFF0;">
+<input type="button" id="dv" class="btn" onclick="window.location.href = 'crocuk';" value="Українська"/>
       <font size="6" color="#696969" face="fantasy">
     <h1> Crocodile </h1>
           <img src={{url_for('static',filename='crocs.png')}} height="300",>

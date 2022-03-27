@@ -49,6 +49,9 @@ def name():
     print(myname)
     return render_template('name.html', myname = myname)
     # return '''<h1>Now you have your fox {}</h1>'''.format(myname)
+@app.route('/crocuk')
+def crocuk():
+    return render_template('crocuk.html')
 
 
 
