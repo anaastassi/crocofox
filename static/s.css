@@ -25,11 +25,11 @@
 height:100%;
 float:left;
 }
-h1 {font-family:fantasy;
+h1 {font-family:Comic Sans MS, Comic Sans, cursive;
 color:#696969;
 text-align:left;
 }
-h2 {font-family:fantasy;
+h2 {font-family:Comic Sans MS, Comic Sans, cursive;
 color:#696969;
 text-align:left;
 }
@@ -142,3 +142,4 @@ display: inline-block;
 	vertical-align: top;
 	transition: box-shadow 0.2s;
 }
+.btn{font-family:Comic Sans MS, Comic Sans, cursive;}
