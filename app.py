@@ -1,25 +1,15 @@
-#
+
 from flask import Flask, render_template,url_for,redirect
-# from flask_sqlalchemy import SQLAlchemy
+
 from flask_bootstrap import Bootstrap
 from flask import request
-# from flask_mysqldb import MySQL
-# import mysql.connector
-#
+
+# from db import get,set,init
+
 app = Flask(__name__)
 Bootstrap(app)
-# mydb= mysql.connector.connect(
-#     host='localhost',
-#     user='root',
-#     passwd='12345678',
-#     database='flaskapp'
-# )
-# my_cursor= mydb.cursor()
-#
-# app.config['MYSQL_HOST']='localhost'
-# app.config['MYSQL_USER']='root'
-# app.config['MYSQL_PASSWORD']='12345678'
-# app.config['MYSQL_DB']='flaskapp'
+
+
 @app.route('/')
 def index():
     # return render_template('index.html')
@@ -47,6 +37,7 @@ def myfox():
 def name():
     myname = request.args.get('usertext')
     print(myname)
+   
     return render_template('name.html', myname = myname)
     # return '''<h1>Now you have your fox {}</h1>'''.format(myname)
 @app.route('/crocuk')
@@ -58,29 +49,15 @@ def crocuk():
 
 
 
-# def set():
-#     name = 'lovely'
-#     email = 'crocodile'
-#     my_cursor.execute("INSERT INTO users(name,email) VALUES (%s, %s)",(name,email))
-#     mydb.commit()
-#
-# def get():
-#
-#
-#     my_cursor.execute("SELECT * FROM users")
-#
-#     myresult = my_cursor.fetchall()
-#
-#     for x in myresult:
-#         print(x)
-
-
 
 
 
 
 
 if __name__ == '__main__':
-    # set()
-    # get()
+    # db=init()
+    #
+    # # set(db,'2',data)
+    # print("данные из базы:"+str(get(db,"lovely")[1]))
+
     app.run(debug= True)
